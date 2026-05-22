@@ -4,9 +4,9 @@
 
 - [ ] Initialize GitHub repository
 - [ ] Setup frontend
-- [ ] Setup backend
+- [x] Setup backend
 - [ ] Configure environment variables
-- [ ] Setup project structure
+- [x] Setup project structure
 
 ---
 
