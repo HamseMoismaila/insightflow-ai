@@ -1,0 +1,113 @@
+{
+  "report_id": "rep_b426d5ec8e18",
+  "filename": "interesting_ai_startups_dataset (1).csv",
+  "row_count": 100,
+  "analyzed_at": "2026-05-22T04:44:31.554954+00:00",
+  "summary": "The dataset contains 100 rows across 10 columns. Columns available: startup_id, startup_name, industry, country, monthly_active_users, monthly_revenue_usd, employee_count, ai_model_accuracy, funding_million_usd, startup_status.",
+  "recommendations": [
+    "Data quality is strong enough to proceed with downstream reporting.",
+    "Investigate the distribution of 'startup_id' to understand major performance shifts.",
+    "Use the uploaded dataset summary to validate business context before acting on AI output."
+  ],
+  "insights": [
+    {
+      "id": "insight-summary",
+      "title": "Dataset shape",
+      "description": "The uploaded dataset contains 100 rows and 10 columns."
+    },
+    {
+      "id": "insight-missing",
+      "title": "Data quality",
+      "description": "No missing values were detected in the uploaded dataset."
+    },
+    {
+      "id": "insight-action",
+      "title": "Recommended action",
+      "description": "Data quality is strong enough to proceed with downstream reporting."
+    }
+  ],
+  "charts": {
+    "barChartData": [
+      {
+        "name": "Row 1",
+        "value": 1.0
+      },
+      {
+        "name": "Row 2",
+        "value": 2.0
+      },
+      {
+        "name": "Row 3",
+        "value": 3.0
+      },
+      {
+        "name": "Row 4",
+        "value": 4.0
+      },
+      {
+        "name": "Row 5",
+        "value": 5.0
+      },
+      {
+        "name": "Row 6",
+        "value": 6.0
+      }
+    ],
+    "lineChartData": [
+      {
+        "name": "Point 1",
+        "value": 34726.0
+      },
+      {
+        "name": "Point 2",
+        "value": 5606.0
+      },
+      {
+        "name": "Point 3",
+        "value": 19121.0
+      },
+      {
+        "name": "Point 4",
+        "value": 30333.0
+      },
+      {
+        "name": "Point 5",
+        "value": 23998.0
+      },
+      {
+        "name": "Point 6",
+        "value": 20934.0
+      },
+      {
+        "name": "Point 7",
+        "value": 25583.0
+      },
+      {
+        "name": "Point 8",
+        "value": 24578.0
+      }
+    ],
+    "pieChartData": [
+      {
+        "name": "Bates Ltd",
+        "value": 1.0
+      },
+      {
+        "name": "Morales PLC",
+        "value": 1.0
+      },
+      {
+        "name": "Morrow Inc",
+        "value": 1.0
+      },
+      {
+        "name": "French, Wright and West",
+        "value": 1.0
+      },
+      {
+        "name": "Cox-Hutchinson",
+        "value": 1.0
+      }
+    ]
+  }
+}

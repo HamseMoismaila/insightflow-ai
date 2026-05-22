@@ -1,6 +1,6 @@
 # Product Roadmap
 
-# V1 — MVP
+# V1 - MVP
 
 Features:
 - CSV/XLSX upload
@@ -9,9 +9,17 @@ Features:
 - Recommendations
 - Public deployment
 
+Current progress:
+- Upload API implemented
+- Analysis API implemented
+- Dashboard API implemented
+- Frontend upload and dashboard flow implemented
+- Local Docker/dev environment prepared
+- Public deployment still pending
+
 ---
 
-# V2 — User Platform
+# V2 - User Platform
 
 Features:
 - User accounts
@@ -21,7 +29,7 @@ Features:
 
 ---
 
-# V3 — Conversational AI
+# V3 - Conversational AI
 
 Features:
 - Chat with data
@@ -30,7 +38,7 @@ Features:
 
 ---
 
-# V4 — Real-Time Analytics
+# V4 - Real-Time Analytics
 
 Features:
 - Streaming analytics
@@ -39,7 +47,7 @@ Features:
 
 ---
 
-# V5 — Autonomous Intelligence
+# V5 - Autonomous Intelligence
 
 Features:
 - AI forecasting

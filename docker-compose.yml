@@ -1,6 +1,47 @@
 version: "3.9"
+
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: insightflow-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5}
+      OPENAI_TIMEOUT_SECONDS: ${OPENAI_TIMEOUT_SECONDS:-30}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://insightflow:insightflow@postgres:5432/insightflow}
     ports:
       - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: insightflow-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-insightflow}
+      POSTGRES_USER: ${POSTGRES_USER:-insightflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-insightflow}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-insightflow} -d ${POSTGRES_DB:-insightflow}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

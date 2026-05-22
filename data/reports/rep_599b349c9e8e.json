@@ -1,0 +1,73 @@
+{
+  "report_id": "rep_599b349c9e8e",
+  "filename": "sales.csv",
+  "row_count": 3,
+  "analyzed_at": "2026-05-22T04:23:22.556909+00:00",
+  "summary": "The dataset contains 3 rows across 3 columns. Columns available: month, revenue, cost.",
+  "recommendations": [
+    "Data quality is strong enough to proceed with downstream reporting.",
+    "Investigate the distribution of 'revenue' to understand major performance shifts.",
+    "Use the uploaded dataset summary to validate business context before acting on AI output."
+  ],
+  "insights": [
+    {
+      "id": "insight-summary",
+      "title": "Dataset shape",
+      "description": "The uploaded dataset contains 3 rows and 3 columns."
+    },
+    {
+      "id": "insight-missing",
+      "title": "Data quality",
+      "description": "No missing values were detected in the uploaded dataset."
+    },
+    {
+      "id": "insight-action",
+      "title": "Recommended action",
+      "description": "Data quality is strong enough to proceed with downstream reporting."
+    }
+  ],
+  "charts": {
+    "barChartData": [
+      {
+        "name": "Row 1",
+        "value": 100.0
+      },
+      {
+        "name": "Row 2",
+        "value": 120.0
+      },
+      {
+        "name": "Row 3",
+        "value": 140.0
+      }
+    ],
+    "lineChartData": [
+      {
+        "name": "Point 1",
+        "value": 60.0
+      },
+      {
+        "name": "Point 2",
+        "value": 75.0
+      },
+      {
+        "name": "Point 3",
+        "value": 82.0
+      }
+    ],
+    "pieChartData": [
+      {
+        "name": "Jan",
+        "value": 1.0
+      },
+      {
+        "name": "Feb",
+        "value": 1.0
+      },
+      {
+        "name": "Mar",
+        "value": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+Household_ID,Head_Name,City,Region,Household_Size,Monthly_Income_USD,Income_Level,Primary_Source
+1,Household_1,Las Anod,Sool,4,250,Middle,Farming
+2,Household_2,Tog Wajaale,Maroodi Jeh,9,176,Low,Fishing
+3,Household_3,Zeila,Awdal,4,306,Middle,Small Business
+4,Household_4,Gabiley,Maroodi Jeh,4,130,Low,Livestock
+5,Household_5,Borama,Awdal,8,485,Middle,Farming
+6,Household_6,Las Anod,Sool,8,134,Low,Remittance
+7,Household_7,Tog Wajaale,Maroodi Jeh,7,464,Middle,Small Business
+8,Household_8,Badhan,Sanaag,5,650,High,Livestock
+9,Household_9,Borama,Awdal,3,129,Low,Small Business
+10,Household_10,Gabiley,Maroodi Jeh,6,200,Low,Farming
+11,Household_11,Borama,Awdal,4,365,Middle,Farming
+12,Household_12,Hargeisa,Maroodi Jeh,4,883,High,Farming
+13,Household_13,El Afweyn,Sanaag,4,123,Low,Remittance
+14,Household_14,Sheikh,Sahil,7,404,Middle,Small Business
+15,Household_15,Lughaya,Awdal,5,105,Low,Remittance
+16,Household_16,El Afweyn,Sanaag,7,435,Middle,Salary
+17,Household_17,Tog Wajaale,Maroodi Jeh,4,205,Low,Salary
+18,Household_18,Zeila,Awdal,3,151,Low,Daily Labor
+19,Household_19,Oodweyne,Togdheer,5,485,Middle,Farming
+20,Household_20,Sheikh,Sahil,4,138,Low,Fishing
+21,Household_21,Lughaya,Awdal,8,200,Low,Fishing
+22,Household_22,Zeila,Awdal,3,195,Low,Livestock
+23,Household_23,Zeila,Awdal,5,112,Low,Trading
+24,Household_24,Berbera,Sahil,5,289,Middle,Trading
+25,Household_25,Las Anod,Sool,3,151,Low,Daily Labor
+26,Household_26,Zeila,Awdal,7,110,Low,Livestock
+27,Household_27,Sheikh,Sahil,3,323,Middle,Salary
+28,Household_28,Las Anod,Sool,4,748,High,Livestock
+29,Household_29,Sheikh,Sahil,8,139,Low,Small Business
+30,Household_30,El Afweyn,Sanaag,8,105,Low,Daily Labor
+31,Household_31,Oodweyne,Togdheer,4,453,Middle,Trading
+32,Household_32,Burao,Togdheer,5,161,Low,Small Business
+33,Household_33,Hargeisa,Maroodi Jeh,6,253,Middle,Livestock
+34,Household_34,Gabiley,Maroodi Jeh,7,218,Low,Small Business
+35,Household_35,Lughaya,Awdal,4,127,Low,Daily Labor
+36,Household_36,Badhan,Sanaag,5,215,Low,Daily Labor
+37,Household_37,Badhan,Sanaag,3,186,Low,Livestock
+38,Household_38,Tog Wajaale,Maroodi Jeh,8,111,Low,Livestock
+39,Household_39,Hargeisa,Maroodi Jeh,4,630,High,Fishing
+40,Household_40,Berbera,Sahil,6,267,Middle,Trading
+41,Household_41,Burao,Togdheer,6,119,Low,Fishing
+42,Household_42,Baki,Awdal,7,733,High,Remittance
+43,Household_43,Borama,Awdal,5,451,Middle,Livestock
+44,Household_44,Las Anod,Sool,4,151,Low,Livestock
+45,Household_45,Burao,Togdheer,6,390,Middle,Farming
+46,Household_46,Baki,Awdal,7,415,Middle,Daily Labor
+47,Household_47,Erigavo,Sanaag,7,113,Low,Small Business
+48,Household_48,Badhan,Sanaag,6,210,Low,Livestock
+49,Household_49,Borama,Awdal,5,188,Low,Farming
+50,Household_50,Lughaya,Awdal,7,109,Low,Small Business
+51,Household_51,Zeila,Awdal,6,431,Middle,Fishing
+52,Household_52,Erigavo,Sanaag,4,155,Low,Small Business
+53,Household_53,Hargeisa,Maroodi Jeh,5,211,Low,Trading
+54,Household_54,Zeila,Awdal,4,169,Low,Farming
+55,Household_55,Erigavo,Sanaag,9,158,Low,Small Business
+56,Household_56,Oodweyne,Togdheer,7,250,Middle,Remittance
+57,Household_57,Burao,Togdheer,6,191,Low,Small Business
+58,Household_58,Badhan,Sanaag,6,744,High,Livestock
+59,Household_59,Sheikh,Sahil,3,162,Low,Farming
+60,Household_60,Badhan,Sanaag,5,190,Low,Farming
+61,Household_61,Berbera,Sahil,6,115,Low,Fishing
+62,Household_62,Oodweyne,Togdheer,4,214,Low,Farming
+63,Household_63,Sheikh,Sahil,8,176,Low,Fishing
+64,Household_64,Sheikh,Sahil,4,104,Low,Trading
+65,Household_65,Tog Wajaale,Maroodi Jeh,6,181,Low,Trading
+66,Household_66,Burao,Togdheer,3,758,High,Trading
+67,Household_67,Las Anod,Sool,5,112,Low,Daily Labor
+68,Household_68,Berbera,Sahil,7,867,High,Salary
+69,Household_69,Hargeisa,Maroodi Jeh,7,471,Middle,Livestock
+70,Household_70,Sheikh,Sahil,3,163,Low,Farming
+71,Household_71,Erigavo,Sanaag,6,174,Low,Remittance
+72,Household_72,Las Anod,Sool,4,114,Low,Fishing
+73,Household_73,Las Anod,Sool,9,414,Middle,Small Business
+74,Household_74,Burao,Togdheer,5,103,Low,Fishing
+75,Household_75,Burao,Togdheer,9,156,Low,Trading
+76,Household_76,Borama,Awdal,4,216,Low,Small Business
+77,Household_77,Baki,Awdal,9,111,Low,Trading
+78,Household_78,Sheikh,Sahil,3,113,Low,Salary
+79,Household_79,El Afweyn,Sanaag,3,112,Low,Trading
+80,Household_80,Zeila,Awdal,3,435,Middle,Small Business
+81,Household_81,Berbera,Sahil,4,439,Middle,Salary
+82,Household_82,Borama,Awdal,7,152,Low,Livestock
+83,Household_83,Oodweyne,Togdheer,4,415,Middle,Trading
+84,Household_84,El Afweyn,Sanaag,5,159,Low,Daily Labor
+85,Household_85,Oodweyne,Togdheer,3,215,Low,Remittance
+86,Household_86,Hargeisa,Maroodi Jeh,3,468,Middle,Farming
+87,Household_87,Sheikh,Sahil,6,197,Low,Fishing
+88,Household_88,Baki,Awdal,6,216,Low,Salary
+89,Household_89,Burao,Togdheer,5,325,Middle,Remittance
+90,Household_90,Oodweyne,Togdheer,4,197,Low,Livestock
+91,Household_91,Berbera,Sahil,8,218,Low,Salary
+92,Household_92,Tog Wajaale,Maroodi Jeh,3,455,Middle,Farming
+93,Household_93,Sheikh,Sahil,3,149,Low,Fishing
+94,Household_94,Gabiley,Maroodi Jeh,8,200,Low,Daily Labor
+95,Household_95,Baki,Awdal,4,175,Low,Fishing
+96,Household_96,Erigavo,Sanaag,5,121,Low,Daily Labor
+97,Household_97,El Afweyn,Sanaag,5,120,Low,Daily Labor
+98,Household_98,Baki,Awdal,7,701,High,Trading
+99,Household_99,Burao,Togdheer,3,153,Low,Salary
+100,Household_100,Berbera,Sahil,3,121,Low,Salary
+101,Household_101,Oodweyne,Togdheer,4,217,Low,Salary
+102,Household_102,Baki,Awdal,3,127,Low,Daily Labor
+103,Household_103,Borama,Awdal,3,272,Middle,Small Business
+104,Household_104,Badhan,Sanaag,5,103,Low,Farming
+105,Household_105,Oodweyne,Togdheer,8,291,Middle,Salary
+106,Household_106,Zeila,Awdal,9,208,Low,Fishing
+107,Household_107,Tog Wajaale,Maroodi Jeh,8,822,High,Livestock
+108,Household_108,Hargeisa,Maroodi Jeh,6,726,High,Fishing
+109,Household_109,Hargeisa,Maroodi Jeh,4,830,High,Remittance
+110,Household_110,Zeila,Awdal,7,248,Middle,Daily Labor
+111,Household_111,Zeila,Awdal,5,288,Middle,Trading
+112,Household_112,Badhan,Sanaag,6,189,Low,Daily Labor
+113,Household_113,Borama,Awdal,3,207,Low,Trading
+114,Household_114,Sheikh,Sahil,4,220,Low,Remittance
+115,Household_115,Tog Wajaale,Maroodi Jeh,5,106,Low,Remittance
+116,Household_116,Hargeisa,Maroodi Jeh,5,561,High,Livestock
+117,Household_117,Borama,Awdal,5,160,Low,Salary
+118,Household_118,Baki,Awdal,4,113,Low,Remittance
+119,Household_119,Berbera,Sahil,7,321,Middle,Farming
+120,Household_120,Berbera,Sahil,4,596,High,Salary
+121,Household_121,Las Anod,Sool,8,404,Middle,Farming
+122,Household_122,Borama,Awdal,4,730,High,Daily Labor
+123,Household_123,Sheikh,Sahil,4,833,High,Daily Labor
+124,Household_124,Tog Wajaale,Maroodi Jeh,7,420,Middle,Farming
+125,Household_125,Erigavo,Sanaag,9,413,Middle,Remittance
+126,Household_126,El Afweyn,Sanaag,9,124,Low,Daily Labor
+127,Household_127,Berbera,Sahil,3,195,Low,Trading
+128,Household_128,Badhan,Sanaag,8,172,Low,Livestock
+129,Household_129,Berbera,Sahil,5,206,Low,Daily Labor
+130,Household_130,Las Anod,Sool,6,322,Middle,Fishing
+131,Household_131,Borama,Awdal,3,168,Low,Farming
+132,Household_132,Berbera,Sahil,7,144,Low,Farming
+133,Household_133,Las Anod,Sool,8,828,High,Daily Labor
+134,Household_134,Burao,Togdheer,3,489,Middle,Trading
+135,Household_135,Burao,Togdheer,5,153,Low,Salary
+136,Household_136,Tog Wajaale,Maroodi Jeh,6,440,Middle,Salary
+137,Household_137,Borama,Awdal,8,129,Low,Small Business
+138,Household_138,Hargeisa,Maroodi Jeh,3,383,Middle,Daily Labor
+139,Household_139,Berbera,Sahil,6,219,Low,Small Business
+140,Household_140,Gabiley,Maroodi Jeh,6,119,Low,Salary
+141,Household_141,El Afweyn,Sanaag,3,172,Low,Small Business
+142,Household_142,Burao,Togdheer,3,125,Low,Salary
+143,Household_143,Las Anod,Sool,7,219,Low,Livestock
+144,Household_144,Erigavo,Sanaag,7,156,Low,Small Business
+145,Household_145,Baki,Awdal,5,182,Low,Remittance
+146,Household_146,El Afweyn,Sanaag,5,161,Low,Farming
+147,Household_147,Berbera,Sahil,9,186,Low,Small Business
+148,Household_148,Erigavo,Sanaag,7,194,Low,Farming
+149,Household_149,Baki,Awdal,5,430,Middle,Fishing
+150,Household_150,Berbera,Sahil,6,156,Low,Daily Labor
+151,Household_151,Berbera,Sahil,3,662,High,Remittance
+152,Household_152,Tog Wajaale,Maroodi Jeh,6,149,Low,Remittance
+153,Household_153,Baki,Awdal,9,182,Low,Remittance
+154,Household_154,Tog Wajaale,Maroodi Jeh,9,266,Middle,Farming
+155,Household_155,Gabiley,Maroodi Jeh,5,354,Middle,Remittance
+156,Household_156,Hargeisa,Maroodi Jeh,5,173,Low,Trading
+157,Household_157,Baki,Awdal,7,651,High,Remittance
+158,Household_158,Gabiley,Maroodi Jeh,3,217,Low,Livestock
+159,Household_159,Borama,Awdal,6,132,Low,Remittance
+160,Household_160,Tog Wajaale,Maroodi Jeh,9,142,Low,Livestock
+161,Household_161,Hargeisa,Maroodi Jeh,3,635,High,Farming
+162,Household_162,Gabiley,Maroodi Jeh,8,189,Low,Fishing
+163,Household_163,Badhan,Sanaag,6,382,Middle,Fishing
+164,Household_164,Borama,Awdal,7,173,Low,Remittance
+165,Household_165,Las Anod,Sool,6,134,Low,Trading
+166,Household_166,Badhan,Sanaag,9,444,Middle,Remittance
+167,Household_167,Baki,Awdal,4,427,Middle,Remittance
+168,Household_168,Las Anod,Sool,9,168,Low,Daily Labor
+169,Household_169,Baki,Awdal,8,201,Low,Salary
+170,Household_170,Badhan,Sanaag,6,204,Low,Trading
+171,Household_171,Sheikh,Sahil,3,124,Low,Remittance
+172,Household_172,Burao,Togdheer,3,156,Low,Salary
+173,Household_173,Las Anod,Sool,4,186,Low,Remittance
+174,Household_174,Oodweyne,Togdheer,7,210,Low,Daily Labor
+175,Household_175,Erigavo,Sanaag,6,185,Low,Livestock
+176,Household_176,Burao,Togdheer,5,134,Low,Farming
+177,Household_177,Burao,Togdheer,8,220,Low,Remittance
+178,Household_178,Badhan,Sanaag,8,235,Middle,Fishing
+179,Household_179,El Afweyn,Sanaag,9,159,Low,Fishing
+180,Household_180,Erigavo,Sanaag,9,220,Low,Livestock
+181,Household_181,Sheikh,Sahil,5,330,Middle,Fishing
+182,Household_182,Gabiley,Maroodi Jeh,9,366,Middle,Small Business
+183,Household_183,Berbera,Sahil,8,105,Low,Fishing
+184,Household_184,El Afweyn,Sanaag,8,201,Low,Salary
+185,Household_185,El Afweyn,Sanaag,8,103,Low,Daily Labor
+186,Household_186,Sheikh,Sahil,5,102,Low,Livestock
+187,Household_187,Zeila,Awdal,4,363,Middle,Remittance
+188,Household_188,Borama,Awdal,6,253,Middle,Daily Labor
+189,Household_189,Las Anod,Sool,4,469,Middle,Daily Labor
+190,Household_190,Las Anod,Sool,7,259,Middle,Trading
+191,Household_191,Oodweyne,Togdheer,8,110,Low,Livestock
+192,Household_192,Erigavo,Sanaag,6,169,Low,Remittance
+193,Household_193,Sheikh,Sahil,3,134,Low,Small Business
+194,Household_194,Borama,Awdal,3,257,Middle,Livestock
+195,Household_195,El Afweyn,Sanaag,9,278,Middle,Fishing
+196,Household_196,Lughaya,Awdal,3,299,Middle,Trading
+197,Household_197,Tog Wajaale,Maroodi Jeh,7,159,Low,Fishing
+198,Household_198,Oodweyne,Togdheer,8,491,Middle,Daily Labor
+199,Household_199,Burao,Togdheer,7,298,Middle,Daily Labor
+200,Household_200,Burao,Togdheer,5,251,Middle,Salary

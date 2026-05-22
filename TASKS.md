@@ -1,62 +1,63 @@
 # Development Tasks
 
-# Phase 1 — Project Setup
+# Phase 1 - Project Setup
 
 - [ ] Initialize GitHub repository
-- [ ] Setup frontend
+- [x] Setup frontend
 - [x] Setup backend
-- [ ] Configure environment variables
+- [x] Configure environment variables
 - [x] Setup project structure
 
 ---
 
-# Phase 2 — Upload System
+# Phase 2 - Upload System
 
-- [ ] Create upload API
-- [ ] Add CSV validation
-- [ ] Add XLSX validation
-- [ ] Implement drag-and-drop upload
+- [x] Create upload API
+- [x] Add CSV validation
+- [x] Add XLSX validation
+- [x] Implement drag-and-drop upload
 
 ---
 
-# Phase 3 — Data Processing
+# Phase 3 - Data Processing
 
-- [ ] Load datasets with Pandas
-- [ ] Detect missing values
+- [x] Load datasets with Pandas
+- [x] Detect missing values
 - [ ] Detect duplicates
-- [ ] Generate statistics
+- [x] Generate statistics
 
 ---
 
-# Phase 4 — Visualization
+# Phase 4 - Visualization
 
-- [ ] Create line charts
-- [ ] Create pie charts
-- [ ] Create bar charts
-- [ ] Build dashboard
+- [x] Create line charts
+- [x] Create pie charts
+- [x] Create bar charts
+- [x] Build dashboard
 
 ---
 
-# Phase 5 — AI Engine
+# Phase 5 - AI Engine
 
-- [ ] Connect OpenAI API
-- [ ] Build prompts
-- [ ] Generate summaries
-- [ ] Generate recommendations
+- [x] Connect OpenAI API
+- [x] Build prompts
+- [x] Build first insight-generation prompt service
+- [x] Generate summaries
+- [x] Generate recommendations
 - [ ] Detect anomalies
 
 ---
 
-# Phase 6 — Frontend Dashboard
+# Phase 6 - Frontend Dashboard
 
-- [ ] Upload page
-- [ ] Dashboard layout
-- [ ] Insight cards
-- [ ] Responsive design
+- [x] Upload page
+- [x] Dashboard layout
+- [x] Insight cards
+- [x] Responsive design
 
 ---
 
-# Phase 7 — Deployment
+# Phase 7 - Deployment
 
 - [ ] Deploy backend
 - [ ] Deploy frontend
@@ -65,10 +66,19 @@
 
 ---
 
-# Phase 8 — Future Features
+# Phase 8 - Future Features
 
 - [ ] Authentication
 - [ ] Saved reports
 - [ ] Conversational AI
 - [ ] Forecasting
 - [ ] Team collaboration
+
+---
+
+# Current MVP Summary
+
+- [x] Local frontend-backend connection debugged
+- [x] End-to-end upload -> analyze -> dashboard flow working locally
+- [x] Backend tests added for upload, analysis, dashboard, OpenAI config, prompt safety, and CORS
+- [x] Frontend integrated into repo structure and connected to backend endpoints

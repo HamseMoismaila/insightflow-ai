@@ -1,4 +1,12 @@
 FROM node:20-alpine
 WORKDIR /app
+
 COPY package.json ./
-CMD ["node", "-e", "console.log('frontend scaffold')"]
+COPY tsconfig.json ./
+COPY vite.config.ts ./
+COPY index.html ./
+COPY src ./src
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
