@@ -1,0 +1,101 @@
+startup_id,startup_name,industry,country,monthly_active_users,monthly_revenue_usd,employee_count,ai_model_accuracy,funding_million_usd,startup_status
+1,Bates Ltd,AI,Madagascar,34726,174220.36,7,88.27,56.27,Scaling
+2,Morales PLC,HealthTech,New Zealand,5606,80771.04,118,82.22,57.11,Stable
+3,Morrow Inc,HealthTech,Ethiopia,19121,172781.34,74,76.37,18.14,Growing
+4,"French, Wright and West",AI,Costa Rica,30333,353649.18,298,80.61,32.64,Scaling
+5,Cox-Hutchinson,FinTech,Bermuda,23998,142674.81,155,73.38,64.13,Stable
+6,"Holden, Wilson and Caldwell",E-commerce,Guinea,20934,84691.13,203,85.1,3.22,Early Stage
+7,"Wright, Hart and Parker",AI,Taiwan,25583,367018.67,20,74.27,86.71,Growing
+8,Richardson-Ross,FinTech,Vietnam,24578,121592.07,76,96.61,110.86,Early Stage
+9,"Smith, Webb and Young",E-commerce,Liberia,32401,398533.97,152,99.82,49.01,Stable
+10,Pollard-Novak,HealthTech,Greece,11002,147675.25,288,84.05,118.58,Scaling
+11,Baird PLC,FinTech,United States of America,37307,145452.82,298,98.37,57.24,Scaling
+12,"Rice, Le and Chaney",EdTech,Lebanon,1140,9090.35,129,79.82,62.7,Scaling
+13,Bradley-Le,FinTech,Kuwait,7766,43105.96,168,73.8,111.52,Early Stage
+14,Davis PLC,AI,Ukraine,23153,230780.23,102,80.57,18.07,Growing
+15,Fitzpatrick-Flores,EdTech,Spain,22031,318605.89,116,96.18,94.13,Stable
+16,Parrish-Davis,FinTech,Philippines,44471,275316.84,282,89.57,113.67,Stable
+17,"Duke, Miles and Davis",FinTech,Heard Island and McDonald Islands,28318,193140.94,150,83.03,104.91,Scaling
+18,Perez-Woodard,HealthTech,Sri Lanka,25247,207775.94,266,82.75,68.06,Stable
+19,Wright-Velazquez,AI,Syrian Arab Republic,42832,175089.14,108,73.57,30.34,Scaling
+20,"Rodriguez, Smith and Mcknight",EdTech,Mauritius,47509,359664.26,167,82.7,55.06,Stable
+21,Hurley-King,E-commerce,Falkland Islands (Malvinas),37115,208497.67,68,80.76,22.68,Stable
+22,Swanson and Sons,HealthTech,Belgium,38599,161477.34,77,75.38,2.41,Growing
+23,"Ware, Cole and Hernandez",EdTech,Chile,1754,7432.66,220,91.0,51.56,Stable
+24,Pacheco Inc,E-commerce,Nepal,24272,202675.32,16,91.68,35.47,Stable
+25,Lawson-Stephens,EdTech,Kenya,42032,630469.5,225,97.75,13.24,Scaling
+26,"Guerrero, Taylor and Beasley",FinTech,Tanzania,40353,234129.29,217,91.49,25.98,Stable
+27,Dalton PLC,FinTech,Saint Vincent and the Grenadines,11708,137087.7,155,87.36,93.02,Scaling
+28,White-Miller,FinTech,Azerbaijan,22386,191141.84,55,91.99,18.69,Growing
+29,"Marshall, Lamb and Martinez",HealthTech,Swaziland,24850,229530.43,68,71.0,63.79,Growing
+30,Sparks-Wright,EdTech,Russian Federation,39638,487752.47,26,76.73,118.8,Scaling
+31,Freeman-Sharp,FinTech,Botswana,25516,257256.87,162,96.19,44.3,Stable
+32,Collins PLC,EdTech,Panama,11144,116441.44,17,92.16,29.36,Stable
+33,Boyle-Matthews,E-commerce,Ireland,42640,467279.37,169,76.48,61.06,Scaling
+34,Ross-Coleman,FinTech,India,8005,60965.8,49,76.6,99.55,Stable
+35,"Ritter, Barr and Smith",AI,Vanuatu,25768,245509.33,99,94.02,5.85,Growing
+36,Burton Group,E-commerce,Venezuela,21805,200058.1,269,75.98,30.4,Growing
+37,Swanson-Jordan,FinTech,French Southern Territories,35808,515447.57,199,81.21,15.85,Stable
+38,Neal LLC,FinTech,Turkmenistan,48947,509542.22,280,79.95,98.91,Stable
+39,Macias Inc,E-commerce,Armenia,40171,582120.13,194,88.71,5.24,Early Stage
+40,Dunn and Sons,HealthTech,Greenland,5897,32486.76,35,70.81,10.82,Growing
+41,"Butler, Sanders and Romero",FinTech,Mongolia,1499,21476.89,58,87.29,37.36,Early Stage
+42,Gordon LLC,FinTech,Poland,17017,223147.84,32,89.81,95.75,Early Stage
+43,Steele-Murphy,HealthTech,Bahamas,7349,105193.98,161,75.71,85.03,Stable
+44,Terry-Smith,FinTech,Brunei Darussalam,3919,33313.79,170,97.28,69.01,Growing
+45,Palmer-Sanders,E-commerce,Monaco,29770,416599.59,275,73.46,105.94,Scaling
+46,Boyd-Durham,E-commerce,Saint Martin,39322,561755.12,191,95.31,115.94,Stable
+47,Gibson-Clayton,AI,French Polynesia,25281,333783.53,234,73.86,107.2,Stable
+48,Gardner and Sons,E-commerce,Samoa,35147,249267.75,272,93.7,66.26,Scaling
+49,Rodriguez Group,EdTech,Luxembourg,32992,287850.38,52,72.57,72.36,Growing
+50,"Collins, Ali and Holland",HealthTech,Guadeloupe,10499,122492.69,136,89.34,38.74,Early Stage
+51,Frederick-Knapp,EdTech,Belgium,14154,127705.97,117,98.42,61.63,Growing
+52,"Hayes, Reed and Ferguson",AI,Tajikistan,26386,284458.78,231,98.64,13.67,Growing
+53,"Garcia, Klein and Dixon",HealthTech,United Arab Emirates,41176,215499.6,73,76.81,51.44,Stable
+54,"Dixon, Lewis and Hernandez",EdTech,Israel,32143,289878.61,286,90.6,13.5,Stable
+55,Marshall Inc,EdTech,Bermuda,40304,324376.42,6,85.76,35.78,Stable
+56,"Bolton, Patterson and Norris",AI,Marshall Islands,1267,5393.44,176,82.15,58.99,Early Stage
+57,Barton Inc,EdTech,Aruba,5238,39185.85,279,95.43,101.48,Early Stage
+58,"Thomas, Hines and Mathews",E-commerce,Saudi Arabia,42868,462159.9,260,77.01,96.08,Early Stage
+59,"Gonzalez, Hubbard and Lindsey",AI,Bhutan,14315,38625.06,216,94.26,69.35,Scaling
+60,Hicks-Fleming,EdTech,Greece,36450,162428.69,172,90.74,21.55,Growing
+61,Huber-Gomez,HealthTech,American Samoa,6748,19619.06,104,93.2,50.99,Early Stage
+62,Stewart-Perez,HealthTech,Germany,26644,294821.22,271,80.44,30.56,Early Stage
+63,Mason-Parks,E-commerce,Sweden,45351,604993.95,211,84.15,40.49,Stable
+64,Nichols LLC,E-commerce,Afghanistan,32612,293507.07,58,82.39,33.67,Growing
+65,Morris-Taylor,E-commerce,Afghanistan,3085,32156.16,121,88.55,68.64,Growing
+66,Holt-Lewis,FinTech,Cayman Islands,11013,115436.25,8,81.21,35.9,Stable
+67,"Smith, Martinez and Holmes",HealthTech,Congo,35377,418681.32,281,95.29,109.63,Scaling
+68,Schultz-Carroll,AI,Latvia,15782,90234.02,286,91.48,18.55,Growing
+69,"Bryant, Shea and Carter",EdTech,Slovakia (Slovak Republic),46570,403260.17,72,95.4,9.94,Scaling
+70,"Ramirez, Martin and Jordan",FinTech,Mozambique,21765,306702.51,42,98.25,35.84,Stable
+71,Miller LLC,HealthTech,Uganda,28370,211241.15,104,98.71,5.81,Early Stage
+72,Holmes-West,FinTech,Chile,9192,65254.63,121,97.38,23.22,Scaling
+73,"Barnes, Hahn and Booth",HealthTech,Nigeria,13669,202173.3,88,95.46,67.24,Scaling
+74,"Dillon, May and Chavez",AI,Philippines,13396,156806.92,53,72.5,32.69,Early Stage
+75,Monroe Inc,AI,Greenland,43044,256828.41,286,84.6,69.76,Stable
+76,Gallagher-Yoder,E-commerce,Slovenia,34787,178837.61,269,76.74,5.87,Stable
+77,"Nash, Mclaughlin and Stewart",HealthTech,Andorra,25574,178473.08,78,72.93,46.96,Growing
+78,"Mann, Taylor and Everett",HealthTech,Mexico,38484,500674.0,112,70.91,12.28,Stable
+79,"Barber, Marshall and Smith",AI,Iraq,29448,231480.36,289,79.53,36.77,Early Stage
+80,Blankenship-Smith,E-commerce,American Samoa,44426,443599.86,265,96.29,77.98,Early Stage
+81,"Henderson, West and Fowler",EdTech,Fiji,30720,437179.07,114,88.14,52.13,Early Stage
+82,Barnes-Sandoval,EdTech,India,16163,187717.77,278,70.51,12.71,Growing
+83,Doyle Group,FinTech,Spain,37778,103228.94,200,93.21,63.77,Scaling
+84,Davis LLC,EdTech,Thailand,6148,53845.0,217,94.35,117.13,Stable
+85,"Rodriguez, Fowler and Hunt",HealthTech,Pakistan,17093,124822.32,68,76.7,45.5,Stable
+86,"Cruz, Perez and White",AI,Iraq,5052,27732.82,18,75.52,21.96,Stable
+87,Santos Inc,E-commerce,Nigeria,22071,144332.72,207,94.77,78.23,Growing
+88,Baker-Reed,HealthTech,Germany,6531,41466.04,182,92.07,52.52,Growing
+89,Kelley Inc,AI,Solomon Islands,10644,86900.33,129,71.55,3.43,Early Stage
+90,Copeland LLC,E-commerce,Dominica,8349,29010.75,106,77.87,41.38,Growing
+91,"Mann, Brewer and Perez",HealthTech,Central African Republic,45626,668668.34,174,77.72,90.54,Early Stage
+92,"Anderson, Kim and Russell",HealthTech,Cyprus,49063,415949.8,213,84.26,64.46,Stable
+93,Hill PLC,AI,Hungary,12309,39182.0,255,95.52,54.88,Growing
+94,"Jones, Jimenez and Johnson",HealthTech,Portugal,13898,145410.15,7,71.41,84.37,Stable
+95,Lee-Love,E-commerce,Philippines,28103,216282.67,114,71.9,38.87,Scaling
+96,Brown-Dunn,AI,Iran,24225,70715.12,259,79.88,92.07,Growing
+97,Nolan-Wilson,AI,Algeria,11593,32650.36,286,70.2,85.37,Growing
+98,Peters PLC,AI,Anguilla,2047,27767.92,226,75.06,87.98,Growing
+99,"Powell, Jones and West",HealthTech,Germany,18702,153984.24,24,71.01,58.4,Early Stage
+100,Parks-Chang,EdTech,Morocco,10408,76019.77,289,84.4,110.72,Early Stage
