@@ -1,58 +1,64 @@
 # Security Guidelines
 
-# File Upload Security
+## Current Security Controls
 
-- Validate file types
-- Restrict upload size
-- Reject executable files
-- Prevent path traversal
-- Sanitize filenames
+### File Upload Safety
 
----
+Implemented in the current MVP:
 
-# API Security
+- allow only `.csv` and `.xlsx`
+- reject empty uploads
+- enforce a maximum upload size
+- sanitize filenames with `Path(...).name`
+- store uploads only in the configured upload directory
 
-- Protect API keys
-- Use environment variables
-- Validate requests
-- Add rate limiting
+### API and Configuration Safety
 
----
+Implemented in the current MVP:
 
-# AI Security
+- OpenAI API key is environment-based
+- settings are loaded through Pydantic Settings
+- CORS origins are explicitly configured
+- OpenAI base URL is restricted to approved OpenAI hosts
 
-- Prevent prompt injection
-- Sanitize dataset text
-- Restrict dangerous prompts
-- Filter malicious input
+### AI Prompt Safety
 
----
+Implemented in the current MVP:
 
-# Infrastructure Security
+- dataset summaries are sanitized before prompt construction
+- control characters are stripped
+- structural tags are filtered
+- prompt-injection phrases are replaced
+- provider-side response storage is disabled in the OpenAI request
 
-- HTTPS only
-- Enable logging
-- Monitor failures
-- Secure deployment environments
+## Current Gaps
 
----
+Not yet implemented:
 
-# Secrets Management
+- authentication
+- authorization
+- rate limiting
+- audit logging
+- encryption at rest for local report files
+- durable production-grade secret management
 
-Never commit:
+## Operational Guidance
+
+Do not commit:
+
 - API keys
 - database credentials
-- .env files
+- `.env` files with real secrets
 
 Use:
-- cloud secret managers
+
 - environment variables
+- hosted secret managers in production
 
----
+## Future Security Work
 
-# Future Security Features
-
-- Authentication
-- RBAC permissions
-- Audit logging
-- Encryption at rest
+- authentication and account ownership
+- RBAC or scoped permissions
+- report access controls
+- rate limiting and abuse protection
+- centralized logging and monitoring

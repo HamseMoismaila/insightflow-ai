@@ -82,3 +82,6 @@
 - [x] End-to-end upload -> analyze -> dashboard flow working locally
 - [x] Backend tests added for upload, analysis, dashboard, OpenAI config, prompt safety, and CORS
 - [x] Frontend integrated into repo structure and connected to backend endpoints
+- [x] Root and backend Python dependency manifests aligned with current imports
+- [x] Analysis report updated to emphasize real dataset findings before data-quality notes
+- [x] Core Markdown documentation aligned with the current MVP implementation

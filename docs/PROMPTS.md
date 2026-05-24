@@ -1,7 +1,24 @@
 # AI Prompt System
 
-# System Prompt
+## Current Role of Prompting
 
+The current backend uses prompting only after it has already built a structured dataset summary from pandas.
+
+The prompt input is not the raw file. It is a sanitized summary that may include:
+
+- row count
+- column count
+- column names
+- missing-value counts
+- duplicate row count
+- numeric statistics
+- numeric highlights
+- categorical highlights
+- trend highlights
+
+## System Prompt
+
+```text
 You are a professional AI business analyst specialized in:
 - data analytics
 - trend analysis
@@ -16,11 +33,11 @@ Analyze datasets and generate:
 - actionable insights
 
 Avoid hallucinations and only use dataset information.
+```
 
----
+## Dataset Analysis Prompt
 
-# Dataset Analysis Prompt
-
+```text
 Analyze the following dataset summary.
 
 Generate:
@@ -32,56 +49,20 @@ Generate:
 
 Dataset Summary:
 {{dataset_summary}}
+```
 
----
+## Safety Notes
 
-# Trend Detection Prompt
+Before prompt construction, the backend sanitizes dataset summary text to reduce prompt injection risk by:
 
-Identify important trends.
+- removing control characters
+- replacing structural tags
+- replacing brace and angle-bracket syntax
+- filtering common prompt-injection phrases
+- truncating the final summary length
 
-Focus on:
-- growth
-- decline
-- seasonality
-- spikes
-- correlations
+## Fallback Behavior
 
-Dataset:
-{{dataset_summary}}
+If OpenAI is not configured or the request fails, the application still returns a report by using local analysis output from the backend services.
 
----
-
-# Recommendation Prompt
-
-Generate actionable business recommendations.
-
-Recommendations should:
-- be concise
-- reference dataset evidence
-- prioritize business impact
-
-Dataset:
-{{dataset_summary}}
-
----
-
-# Anomaly Detection Prompt
-
-Detect unusual patterns, spikes, drops, or inconsistencies.
-
-Explain:
-- what happened
-- why it matters
-- possible causes
-
-Dataset:
-{{dataset_summary}}
-
----
-
-# Natural Language Summary Prompt
-
-Explain this dataset in simple language for non-technical users.
-
-Dataset:
-{{dataset_summary}}
+That fallback path is expected behavior in the MVP.

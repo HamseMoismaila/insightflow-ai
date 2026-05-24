@@ -1,0 +1,123 @@
+{
+  "report_id": "rep_77c0d093c6cb",
+  "filename": "Store_Sales_data.csv",
+  "row_count": 100,
+  "analyzed_at": "2026-05-24T10:15:26.655247+00:00",
+  "summary": "The dataset contains 100 rows across 10 columns. Quantity Sold trends downward from 20.0 to 1.0 (-95.0% change). Quantity Sold averages 10.06 with values between 1.0 and 20.0. The leading category in Product_ID is PROD-43 (1 rows).",
+  "recommendations": [
+    "Prioritize investigation of Quantity Sold because it moved downward by -95.0% across the sampled records.",
+    "Use Product_ID segmentation to compare why PROD-43 leads with 1 rows.",
+    "Data quality checks look stable, so the report can stay focused on business interpretation."
+  ],
+  "insights": [
+    {
+      "id": "insight-summary",
+      "title": "Dataset scope",
+      "description": "The uploaded dataset contains 100 rows and 10 columns."
+    },
+    {
+      "id": "insight-performance",
+      "title": "Performance signal",
+      "description": "Quantity Sold moved downward from 20.0 to 1.0 (-95.0%)."
+    },
+    {
+      "id": "insight-composition",
+      "title": "Category signal",
+      "description": "PROD-43 is the most common value in Product_ID with 1 rows."
+    },
+    {
+      "id": "insight-quality",
+      "title": "Data quality note",
+      "description": "No major missing-value or duplicate issues were detected in the sampled report."
+    },
+    {
+      "id": "insight-action",
+      "title": "Recommended action",
+      "description": "Prioritize investigation of Quantity Sold because it moved downward by -95.0% across the sampled records."
+    }
+  ],
+  "charts": {
+    "barChartData": [
+      {
+        "name": "Row 1",
+        "value": 20.0
+      },
+      {
+        "name": "Row 2",
+        "value": 20.0
+      },
+      {
+        "name": "Row 3",
+        "value": 19.0
+      },
+      {
+        "name": "Row 4",
+        "value": 13.0
+      },
+      {
+        "name": "Row 5",
+        "value": 12.0
+      },
+      {
+        "name": "Row 6",
+        "value": 12.0
+      }
+    ],
+    "lineChartData": [
+      {
+        "name": "Point 1",
+        "value": 200.0
+      },
+      {
+        "name": "Point 2",
+        "value": 200.0
+      },
+      {
+        "name": "Point 3",
+        "value": 200.0
+      },
+      {
+        "name": "Point 4",
+        "value": 200.0
+      },
+      {
+        "name": "Point 5",
+        "value": 200.0
+      },
+      {
+        "name": "Point 6",
+        "value": 200.0
+      },
+      {
+        "name": "Point 7",
+        "value": 200.0
+      },
+      {
+        "name": "Point 8",
+        "value": 100.0
+      }
+    ],
+    "pieChartData": [
+      {
+        "name": "PROD-43",
+        "value": 1.0
+      },
+      {
+        "name": "PROD-46",
+        "value": 1.0
+      },
+      {
+        "name": "PROD-49",
+        "value": 1.0
+      },
+      {
+        "name": "PROD-40",
+        "value": 1.0
+      },
+      {
+        "name": "PROD-41",
+        "value": 1.0
+      }
+    ]
+  }
+}

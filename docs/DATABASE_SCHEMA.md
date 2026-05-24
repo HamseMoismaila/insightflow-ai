@@ -1,76 +1,98 @@
 # Database Schema
 
-# Overview
+## Current MVP Reality
 
-The MVP may initially operate without persistent storage.
+The current application flow does not persist uploads or reports to PostgreSQL yet.
 
-Future versions will support:
-- users
-- reports
-- uploads
-- AI history
-- analytics tracking
+Implemented storage today:
 
----
+- upload files are saved to `data/uploads`
+- upload metadata is saved as JSON alongside the uploaded file
+- generated reports are saved to `data/reports` as JSON payloads
 
-# Tables
+## Current Local Record Shapes
 
-## Users
+### Upload Metadata JSON
+
+Stored per upload in `data/uploads/{upload_id}.json`.
+
+Fields:
+
+- `upload_id`
+- `filename`
+- `stored_filename`
+- `file_size`
+- `created_at`
+
+### Report JSON
+
+Stored per report in `data/reports/{report_id}.json`.
+
+Fields:
+
+- `report_id`
+- `filename`
+- `row_count`
+- `analyzed_at`
+- `summary`
+- `recommendations`
+- `insights`
+- `charts`
+
+## Planned Relational Schema
+
+The following tables remain a future direction once database persistence is activated.
+
+### Users
 
 | Field | Type | Description |
 |---|---|---|
-| id | UUID | Primary Key |
+| id | UUID | Primary key |
 | email | VARCHAR | User email |
 | password_hash | TEXT | Hashed password |
-| created_at | TIMESTAMP | Account creation |
+| created_at | TIMESTAMP | Account creation time |
 
----
-
-## Uploads
+### Uploads
 
 | Field | Type | Description |
 |---|---|---|
 | id | UUID | Upload ID |
 | user_id | UUID | Owner |
-| filename | VARCHAR | Uploaded filename |
-| file_size | INTEGER | File size |
-| created_at | TIMESTAMP | Upload timestamp |
+| filename | VARCHAR | Original filename |
+| stored_filename | VARCHAR | Filesystem or object-storage key |
+| file_size | INTEGER | File size in bytes |
+| created_at | TIMESTAMP | Upload time |
 
----
-
-## Reports
+### Reports
 
 | Field | Type | Description |
 |---|---|---|
 | id | UUID | Report ID |
 | upload_id | UUID | Related upload |
-| summary | TEXT | AI summary |
-| recommendations | JSON | AI recommendations |
-| charts | JSON | Visualization metadata |
-| created_at | TIMESTAMP | Report timestamp |
+| summary | TEXT | Summary text |
+| recommendations | JSON | Recommendation list |
+| insights | JSON | Insight cards |
+| charts | JSON | Chart payloads |
+| created_at | TIMESTAMP | Report creation time |
 
----
-
-## Analytics_History
+### Analytics History
 
 | Field | Type | Description |
 |---|---|---|
 | id | UUID | Analysis ID |
 | report_id | UUID | Related report |
-| anomaly_detected | BOOLEAN | Anomaly flag |
-| trend_summary | TEXT | Trend analysis |
-| created_at | TIMESTAMP | Timestamp |
+| trend_summary | TEXT | Trend notes |
+| anomaly_detected | BOOLEAN | Optional anomaly flag |
+| created_at | TIMESTAMP | Analysis timestamp |
 
----
-
-# Relationships
+## Relationship Direction
 
 ```text
 Users
-  ↓
+  ->
 Uploads
-  ↓
+  ->
 Reports
-  ↓
-Analytics_History
+  ->
+Analytics History
 ```

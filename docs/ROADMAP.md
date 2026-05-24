@@ -1,56 +1,55 @@
 # Product Roadmap
 
-# V1 - MVP
+## V1 - Current MVP
 
-Features:
+Implemented or active:
+
 - CSV/XLSX upload
-- Charts dashboard
-- AI insights
-- Recommendations
-- Public deployment
+- local upload validation and storage
+- dataset profiling with pandas
+- dashboard JSON generation
+- summary and recommendation generation
+- chart rendering in the frontend
+- OpenAI-backed insight path with local fallback
 
-Current progress:
-- Upload API implemented
-- Analysis API implemented
-- Dashboard API implemented
-- Frontend upload and dashboard flow implemented
-- Local Docker/dev environment prepared
-- Public deployment still pending
+Still open in V1:
 
----
+- public deployment
+- richer anomaly detection
+- persistent database-backed reports
+- more business-focused frontend metrics
 
-# V2 - User Platform
+## V2 - Report Persistence
 
-Features:
-- User accounts
-- Saved reports
-- Report exports
-- Dashboard history
+Planned goals:
 
----
+- save uploads and reports in PostgreSQL
+- saved report history
+- stronger metadata tracking
+- cleaner separation between draft analysis and final report records
 
-# V3 - Conversational AI
+## V3 - User Platform
 
-Features:
-- Chat with data
-- Natural language analytics
-- AI analyst assistant
+Planned goals:
 
----
+- authentication
+- account ownership of uploads and reports
+- exportable reports
+- report history UI
 
-# V4 - Real-Time Analytics
+## V4 - Conversational Analytics
 
-Features:
-- Streaming analytics
-- Real-time alerts
-- Live dashboards
+Planned goals:
 
----
+- chat with uploaded data
+- follow-up questions over a generated report
+- AI analyst assistant workflow
 
-# V5 - Autonomous Intelligence
+## V5 - Advanced Intelligence
 
-Features:
-- AI forecasting
-- Autonomous recommendations
-- Decision support systems
-- AI monitoring agents
+Planned goals:
+
+- stronger anomaly detection
+- forecasting
+- real-time or recurring analysis
+- autonomous recommendation workflows

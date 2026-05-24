@@ -58,29 +58,70 @@ class DashboardService:
     def _build_insight_cards(
         self, summary_payload: dict[str, Any], recommendations: list[str]
     ) -> list[dict[str, str]]:
+        trend_highlights = summary_payload["trend_highlights"]
+        numeric_highlights = summary_payload["numeric_highlights"]
+        categorical_highlights = summary_payload["categorical_highlights"]
         missing_values = summary_payload["missing_values"]
-        highest_missing_column = max(missing_values, key=missing_values.get) if missing_values else None
-        if highest_missing_column and missing_values[highest_missing_column] > 0:
-            missing_message = (
-                f"Highest missing-value column: {highest_missing_column} "
-                f"({missing_values[highest_missing_column]} missing values)."
+        duplicate_count = summary_payload["duplicate_count"]
+
+        if trend_highlights:
+            trend = trend_highlights[0]
+            performance_message = (
+                f"{trend['column']} moved {trend['direction']} from {trend['start']} "
+                f"to {trend['end']} ({trend['change_percent']}%)."
+            )
+        elif numeric_highlights:
+            metric = numeric_highlights[0]
+            performance_message = (
+                f"{metric['column']} averages {metric['mean']} with a range of "
+                f"{metric['min']} to {metric['max']}."
             )
         else:
-            missing_message = "No missing values were detected in the uploaded dataset."
+            performance_message = "The report is based mainly on categorical structure because numeric trends are limited."
+
+        if categorical_highlights:
+            category = categorical_highlights[0]
+            composition_message = (
+                f"{category['top_value']} is the most common value in {category['column']} "
+                f"with {category['top_count']} rows."
+            )
+        else:
+            composition_message = "No dominant category was detected, so the report leans on numeric patterns."
+
+        highest_missing_column = max(missing_values, key=missing_values.get) if missing_values else None
+        if highest_missing_column and missing_values[highest_missing_column] > 0:
+            quality_message = (
+                f"{highest_missing_column} has the largest data gap with "
+                f"{missing_values[highest_missing_column]} missing values."
+            )
+        elif duplicate_count > 0:
+            quality_message = f"The dataset includes {duplicate_count} duplicate rows that may affect totals."
+        else:
+            quality_message = "No major missing-value or duplicate issues were detected in the sampled report."
 
         return [
             {
                 "id": "insight-summary",
-                "title": "Dataset shape",
+                "title": "Dataset scope",
                 "description": (
                     f"The uploaded dataset contains {summary_payload['row_count']} rows and "
                     f"{summary_payload['column_count']} columns."
                 ),
             },
             {
-                "id": "insight-missing",
-                "title": "Data quality",
-                "description": missing_message,
+                "id": "insight-performance",
+                "title": "Performance signal",
+                "description": performance_message,
+            },
+            {
+                "id": "insight-composition",
+                "title": "Category signal",
+                "description": composition_message,
+            },
+            {
+                "id": "insight-quality",
+                "title": "Data quality note",
+                "description": quality_message,
             },
             {
                 "id": "insight-action",

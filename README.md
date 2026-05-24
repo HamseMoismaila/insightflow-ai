@@ -1,22 +1,25 @@
 # insightflow-ai
 
-InsightFlow AI is an MVP analytics application for uploading CSV/XLSX datasets, generating AI-backed insights, and displaying a dashboard of summaries, recommendations, and charts.
+InsightFlow AI is a local MVP for uploading CSV/XLSX datasets, generating dataset-aware analysis, and rendering a dashboard with summaries, recommendations, insight cards, and charts.
 
-## Overview
+## What It Does Today
 
-The project is built as a frontend-backend monorepo:
-- a React frontend for file upload, analysis flow, and dashboard display
-- a FastAPI backend for upload handling, dataset analysis, AI prompt generation, and dashboard response shaping
-- local filesystem storage for uploaded files and generated reports in the current MVP
+The current implementation supports this end-to-end flow:
 
-The current implementation supports the full local v1 workflow:
-1. upload a CSV or XLSX dataset
-2. store and validate the file on the backend
-3. generate a dataset summary with pandas
-4. produce AI-backed or safe mock insights
-5. return dashboard-ready JSON to the frontend
+1. Upload a CSV or XLSX file from the React frontend
+2. Validate and store the file on the FastAPI backend
+3. Load the dataset with pandas
+4. Build a report from real dataset signals such as:
+   - row and column counts
+   - numeric ranges and averages
+   - simple trend direction
+   - dominant category values
+   - missing values and duplicates
+5. Generate an AI-backed summary when OpenAI is configured, or a safe local fallback summary when it is not
+6. Save a dashboard-ready report payload to local storage
+7. Fetch and render the report in the frontend
 
-## Technologies Used
+## Tech Stack
 
 ### Frontend
 
@@ -24,115 +27,89 @@ The current implementation supports the full local v1 workflow:
 - TypeScript
 - Vite
 - Tailwind CSS v4
-- Recharts for bar, line, and pie charts
-- Lucide React for UI icons
+- Recharts
+- Lucide React
 
 ### Backend
 
 - Python 3
 - FastAPI
 - Uvicorn
-- Pydantic Settings for environment-based configuration
-- Pandas for dataset loading and numeric/statistical profiling
-- OpenPyXL for XLSX parsing
-- `python-multipart` for file upload handling
-- HTTPX for OpenAI API communication
+- Pydantic and Pydantic Settings
+- Pandas
+- OpenPyXL
+- python-multipart
+- HTTPX
 
-### AI / Prompting
+### Tooling
 
-- OpenAI Responses API integration
-- Prompt-building service based on `docs/PROMPTS.md`
-- Input sanitization and prompt-safety filtering
-- Safe fallback summary/recommendations when OpenAI is not configured
+- Pytest
+- Docker
+- Docker Compose
 
-### Tooling / Infrastructure
+## Current Architecture
 
-- Docker for backend containerization
-- Docker Compose for backend + PostgreSQL local setup
-- Pytest for backend testing
+- `frontend/` contains the React app
+- `backend/app/` contains the FastAPI app
+- `backend/app/api/v1/` contains HTTP routes
+- `backend/app/services/` contains the main business logic
+- `backend/app/schemas/` contains response models
+- `data/uploads/` stores uploaded files locally
+- `data/reports/` stores generated report JSON locally
+- `docs/` contains product and technical documentation
 
-## Current Backend Features
+## Implemented API
 
-Implemented API routes:
 - `GET /api/v1/health`
 - `POST /api/v1/upload`
 - `POST /api/v1/analyze/{upload_id}`
 - `GET /api/v1/dashboard/{report_id}`
 
-Implemented backend capabilities:
-- CSV and XLSX validation
-- safe local upload storage
-- row count, column count, column names, missing values, and numeric statistics generation
-- dashboard-ready chart payload generation
-- recommendations and summary generation
-- CORS support for local frontend-backend development
+## Current Report Behavior
 
-## Current Frontend Features
+The dashboard now prioritizes actual dataset findings before data-quality warnings.
 
-Implemented frontend capabilities:
-- dataset upload UI
-- drag-and-drop upload flow
-- upload progress, error, and retry states
-- analysis progress state
-- dashboard summary view
-- recommendation panel
-- insight cards
-- bar, line, and pie chart display
-- empty, loading, and error states
+Examples of the current report content:
 
-## Project Structure
-
-Key directories:
-- `frontend/` - React + Vite frontend
-- `backend/` - FastAPI backend
-- `docs/` - product, API, roadmap, security, and system design documents
-- `data/uploads/` - local uploaded datasets for MVP
-- `data/reports/` - local generated report payloads for MVP
-
-## Current Status
-
-Completed work in this repository:
-- FastAPI backend with working MVP routes
-- React frontend integrated into repo structure
-- local end-to-end upload -> analyze -> dashboard flow working
-- OpenAI configuration through environment variables
-- Docker setup for backend and PostgreSQL
-- backend automated tests for:
-  - health
-  - config
-  - prompt safety
-  - OpenAI service
-  - upload
-  - analysis
-  - dashboard
-  - CORS
+- trend direction for numeric columns
+- min, max, and average for key numeric columns
+- most common values for categorical columns
+- recommendations tied to observed dataset behavior
+- missing-value and duplicate notes as supporting context
 
 ## Local Development
 
-Backend from the repo root:
+### Backend
+
+From the repo root:
 
 ```powershell
 python -m pip install -r requirements.txt
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 ```
 
-Frontend from `frontend/`:
+### Frontend
+
+From `frontend/`:
 
 ```powershell
 npm install
 npm run dev
 ```
 
-Local URLs:
+### Local URLs
+
 - Frontend: `http://127.0.0.1:3000`
 - Backend health: `http://127.0.0.1:8000/api/v1/health`
 
-## Environment Notes
+## Environment Variables
 
-Important environment variables:
+Important variables used by the current MVP:
+
 - `OPENAI_API_KEY`
 - `OPENAI_MODEL`
 - `OPENAI_TIMEOUT_SECONDS`
+- `OPENAI_BASE_URL`
 - `ALLOWED_CORS_ORIGINS`
 - `UPLOAD_STORAGE_DIR`
 - `REPORT_STORAGE_DIR`
@@ -140,11 +117,11 @@ Important environment variables:
 - `DATABASE_URL`
 - `VITE_API_BASE_URL`
 
-See [.env.example](C:/Users/User/OneDrive%20-%20Nilai%20University/Desktop/insightflow-ai/.env.example) for the current template.
+See `.env.example` for the current template.
 
 ## Notes
 
-- The MVP currently uses local filesystem storage for uploads and reports.
-- Secrets are environment-based and are not hardcoded in the codebase.
-- Public deployment remains planned work and is not yet complete.
-- PostgreSQL is prepared in local infrastructure, but the current MVP flow still relies on local file/report storage rather than database persistence.
+- The MVP currently persists uploads and reports on the local filesystem.
+- PostgreSQL is prepared in Docker infrastructure, but the active MVP flow does not yet store uploads or reports in the database.
+- OpenAI is optional for local development because the backend includes a safe fallback report path.
+- The frontend is connected to the real backend API and renders report payloads returned by the backend.

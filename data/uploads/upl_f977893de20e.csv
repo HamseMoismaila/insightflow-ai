@@ -1,0 +1,101 @@
+Product_ID,Date,Day,Month,Product,Category,Quantity Sold,Unit Price,Total Sales,Payment Method
+PROD-43,22/3/2025,Saturday,March,Standing Desk,Furniture,20,200.0,4000.0,Cash
+PROD-46,16/3/2025,Sunday,March,Standing Desk,Furniture,20,200.0,4000.0,Credit Card
+PROD-49,15/3/2025,Saturday,March,Standing Desk,Furniture,19,200.0,3800.0,Credit Card
+PROD-40,11/3/2025,Tuesday,March,Standing Desk,Furniture,13,200.0,2600.0,Cash
+PROD-41,18/3/2025,Tuesday,March,Standing Desk,Furniture,12,200.0,2400.0,Cash
+PROD-50,25/3/2025,Tuesday,March,Standing Desk,Furniture,12,200.0,2400.0,Credit Card
+PROD-44,9/3/2025,Sunday,March,Standing Desk,Furniture,11,200.0,2200.0,Cash
+PROD-26,16/3/2025,Sunday,March,Office Chair,Furniture,18,100.0,1799.8,Cash
+PROD-22,25/3/2025,Tuesday,March,Office Chair,Furniture,17,100.0,1699.8,Cash
+PROD-47,3/3/2025,Monday,March,Standing Desk,Furniture,8,200.0,1600.0,Cash
+PROD-24,23/3/2025,Sunday,March,Office Chair,Furniture,12,100.0,1199.9,Debit Card
+PROD-45,10/3/2025,Monday,March,Standing Desk,Furniture,5,200.0,1000.0,Cash
+PROD-21,19/3/2025,Wednesday,March,Office Chair,Furniture,10,100.0,999.9,Debit Card
+PROD-28,1/3/2025,Saturday,March,Office Chair,Furniture,10,100.0,999.9,Cash
+PROD-27,18/3/2025,Tuesday,March,Office Chair,Furniture,9,100.0,899.9,Cash
+PROD-23,19/3/2025,Wednesday,March,Office Chair,Furniture,8,100.0,799.9,Debit Card
+PROD-20,6/3/2025,Thursday,March,Office Chair,Furniture,7,100.0,699.9,Credit Card
+PROD-25,30/3/2025,Sunday,March,Office Chair,Furniture,7,100.0,699.9,Debit Card
+PROD-90,6/3/2025,Thursday,March,Wireless Keyboard,Electronics,20,30.5,610.0,Credit Card
+PROD-39,8/3/2025,Saturday,March,Standing Desk,Furniture,3,200.0,600.0,Debit Card
+PROD-42,21/3/2025,Friday,March,Standing Desk,Furniture,3,200.0,600.0,Credit Card
+PROD-48,10/3/2025,Monday,March,Standing Desk,Furniture,3,200.0,600.0,Credit Card
+PROD-84,13/3/2025,Thursday,March,Wireless Keyboard,Electronics,19,30.5,579.5,Debit Card
+PROD-83,5/3/2025,Wednesday,March,Wireless Keyboard,Electronics,17,30.5,518.5,Credit Card
+PROD-93,3/3/2025,Monday,March,Wireless Keyboard,Electronics,15,30.5,457.5,Debit Card
+PROD-7,13/3/2025,Thursday,March,Coffee Maker,Electronics,15,30.0,449.9,Debit Card
+PROD-9,8/3/2025,Saturday,March,LED Desk Lamp,Electronics,18,25.0,449.8,Credit Card
+PROD-92,20/3/2025,Thursday,March,Wireless Keyboard,Electronics,14,30.5,427.0,Credit Card
+PROD-4,30/3/2025,Sunday,March,Coffee Maker,Electronics,14,30.0,419.9,Credit Card
+PROD-8,5/3/2025,Wednesday,March,Coffee Maker,Electronics,13,30.0,389.9,Cash
+PROD-89,17/3/2025,Monday,March,Wireless Keyboard,Electronics,12,30.5,366.0,Credit Card
+PROD-12,26/3/2025,Wednesday,March,LED Desk Lamp,Electronics,14,25.0,349.9,Debit Card
+PROD-33,4/3/2025,Tuesday,March,Printer Ink,Electronics,16,21.0,335.8,Credit Card
+PROD-36,9/3/2025,Sunday,March,Printer Ink,Electronics,16,21.0,335.8,Credit Card
+PROD-38,2/3/2025,Sunday,March,Printer Ink,Electronics,15,21.0,314.9,Debit Card
+PROD-86,20/3/2025,Thursday,March,Wireless Keyboard,Electronics,10,30.5,305.0,Cash
+PROD-87,2/3/2025,Sunday,March,Wireless Keyboard,Electronics,10,30.5,305.0,Cash
+PROD-29,9/3/2025,Sunday,March,Office Chair,Furniture,3,100.0,300.0,Cash
+PROD-81,3/3/2025,Monday,March,Wireless Keyboard,Electronics,9,30.5,274.5,Cash
+PROD-82,4/3/2025,Tuesday,March,Wireless Keyboard,Electronics,9,30.5,274.5,Credit Card
+PROD-34,7/3/2025,Friday,March,Printer Ink,Electronics,13,21.0,272.9,Debit Card
+PROD-2,9/3/2025,Sunday,March,Coffee Maker,Electronics,9,30.0,269.9,Cash
+PROD-88,13/3/2025,Thursday,March,Wireless Keyboard,Electronics,8,30.5,244.0,Cash
+PROD-37,14/3/2025,Friday,March,Printer Ink,Electronics,9,21.0,188.9,Credit Card
+PROD-91,19/3/2025,Wednesday,March,Wireless Keyboard,Electronics,6,30.5,183.0,Credit Card
+PROD-11,26/3/2025,Wednesday,March,LED Desk Lamp,Electronics,7,25.0,174.9,Cash
+PROD-35,24/3/2025,Monday,March,Printer Ink,Electronics,8,21.0,167.9,Cash
+PROD-94,7/3/2025,Friday,March,Wireless Keyboard,Electronics,5,30.5,152.5,Debit Card
+PROD-3,23/3/2025,Sunday,March,Coffee Maker,Electronics,5,30.0,150.0,Credit Card
+PROD-5,3/3/2025,Monday,March,Coffee Maker,Electronics,5,30.0,150.0,Cash
+PROD-32,29/3/2025,Saturday,March,Printer Ink,Electronics,7,21.0,146.9,Cash
+PROD-96,17/3/2025,Monday,March,Wireless Mouse,Electronics,9,14.7,132.3,Credit Card
+PROD-98,5/3/2025,Wednesday,March,Wireless Mouse,Electronics,8,14.7,117.6,Debit Card
+PROD-100,28/3/2025,Friday,March,Wireless Mouse,Electronics,8,14.7,117.6,Cash
+PROD-101,4/3/2025,Tuesday,March,Wireless Mouse,Electronics,8,14.7,117.6,Debit Card
+PROD-99,24/3/2025,Monday,March,Wireless Mouse,Electronics,7,14.7,102.9,Credit Card
+PROD-58,25/3/2025,Tuesday,March,USB-C Cable,Electronics,20,5.0,100.0,Debit Card
+PROD-62,21/3/2025,Friday,March,USB-C Cable,Electronics,20,5.0,100.0,Cash
+PROD-30,10/3/2025,Monday,March,Office Chair,Furniture,1,100.0,100.0,Cash
+PROD-10,22/3/2025,Saturday,March,LED Desk Lamp,Electronics,4,25.0,100.0,Cash
+PROD-6,4/3/2025,Tuesday,March,Coffee Maker,Electronics,3,30.0,90.0,Cash
+PROD-97,6/3/2025,Thursday,March,Wireless Mouse,Electronics,6,14.7,88.2,Credit Card
+PROD-64,29/3/2025,Saturday,March,USB-C Cable,Electronics,16,5.0,80.0,Credit Card
+PROD-51,1/3/2025,Saturday,March,USB-C Cable,Electronics,15,5.0,75.0,Cash
+PROD-52,7/3/2025,Friday,March,USB-C Cable,Electronics,14,5.0,70.0,Debit Card
+PROD-54,24/3/2025,Monday,March,USB-C Cable,Electronics,13,5.0,65.0,Debit Card
+PROD-31,14/3/2025,Friday,March,Printer Ink,Electronics,3,21.0,63.0,Cash
+PROD-55,28/3/2025,Friday,March,USB-C Cable,Electronics,12,5.0,60.0,Debit Card
+PROD-61,17/3/2025,Monday,March,USB-C Cable,Electronics,12,5.0,60.0,Cash
+PROD-63,23/3/2025,Sunday,March,USB-C Cable,Electronics,10,5.0,50.0,Credit Card
+PROD-56,11/3/2025,Tuesday,March,USB-C Cable,Electronics,9,5.0,45.0,Cash
+PROD-57,15/3/2025,Saturday,March,USB-C Cable,Electronics,8,5.0,40.0,Cash
+PROD-75,27/3/2025,Thursday,March,Water Bottle,Appliances,20,2.0,40.0,Cash
+PROD-71,12/3/2025,Wednesday,March,Water Bottle,Appliances,18,2.0,36.0,Debit Card
+PROD-53,16/3/2025,Sunday,March,USB-C Cable,Electronics,7,5.0,35.0,Debit Card
+PROD-65,6/3/2025,Thursday,March,USB-C Cable,Electronics,7,5.0,35.0,Credit Card
+PROD-80,30/3/2025,Sunday,March,Water Bottle,Appliances,16,2.0,32.0,Credit Card
+PROD-85,15/3/2025,Saturday,March,Wireless Keyboard,Electronics,1,30.5,30.5,Debit Card
+PROD-59,1/3/2025,Saturday,March,USB-C Cable,Electronics,6,5.0,30.0,Debit Card
+PROD-66,8/3/2025,Saturday,March,USB-C Cable,Electronics,6,5.0,30.0,Cash
+PROD-73,18/3/2025,Tuesday,March,Water Bottle,Appliances,15,2.0,30.0,Credit Card
+PROD-95,12/3/2025,Wednesday,March,Wireless Mouse,Electronics,2,14.7,29.4,Cash
+PROD-79,22/3/2025,Saturday,March,Water Bottle,Appliances,13,2.0,26.0,Cash
+PROD-72,14/3/2025,Friday,March,Water Bottle,Appliances,12,2.0,24.0,Debit Card
+PROD-78,7/3/2025,Friday,March,Water Bottle,Appliances,12,2.0,24.0,Credit Card
+PROD-76,29/3/2025,Saturday,March,Water Bottle,Appliances,11,2.0,22.0,Credit Card
+PROD-60,11/3/2025,Tuesday,March,USB-C Cable,Electronics,4,5.0,20.0,Debit Card
+PROD-77,2/3/2025,Sunday,March,Water Bottle,Appliances,8,2.0,16.0,Credit Card
+PROD-15,21/3/2025,Friday,March,Notebook,Stationery,14,1.0,14.0,Cash
+PROD-68,10/3/2025,Monday,March,Water Bottle,Appliances,7,2.0,14.0,Cash
+PROD-13,1/3/2025,Saturday,March,Notebook,Stationery,13,1.0,13.0,Cash
+PROD-19,27/3/2025,Thursday,March,Notebook,Stationery,12,1.0,12.0,Credit Card
+PROD-69,26/3/2025,Wednesday,March,Water Bottle,Appliances,5,2.0,10.0,Credit Card
+PROD-17,8/3/2025,Saturday,March,Notebook,Stationery,9,1.0,9.0,Credit Card
+PROD-70,27/3/2025,Thursday,March,Water Bottle,Appliances,3,2.0,6.0,Cash
+PROD-14,5/3/2025,Wednesday,March,Notebook,Stationery,4,1.0,4.0,Credit Card
+PROD-67,2/3/2025,Sunday,March,Water Bottle,Appliances,2,2.0,4.0,Debit Card
+PROD-74,20/3/2025,Thursday,March,Water Bottle,Appliances,2,2.0,4.0,Debit Card
+PROD-18,12/3/2025,Wednesday,March,Notebook,Stationery,2,1.0,2.0,Cash
+PROD-16,28/3/2025,Friday,March,Notebook,Stationery,1,1.0,1.0,Credit Card

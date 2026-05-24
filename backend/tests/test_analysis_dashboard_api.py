@@ -21,12 +21,17 @@ def test_analyze_upload_and_fetch_dashboard(client) -> None:
     assert dashboard_response.status_code == 200
     dashboard_payload = dashboard_response.json()
     assert dashboard_payload["summary"]
+    assert "revenue" in dashboard_payload["summary"].lower()
     assert isinstance(dashboard_payload["recommendations"], list)
-    assert len(dashboard_payload["recommendations"]) >= 1
+    assert len(dashboard_payload["recommendations"]) >= 3
+    assert "upward" in dashboard_payload["recommendations"][0].lower()
     assert "barChartData" in dashboard_payload["charts"]
     assert "lineChartData" in dashboard_payload["charts"]
     assert "pieChartData" in dashboard_payload["charts"]
     assert isinstance(dashboard_payload["insights"], list)
+    assert len(dashboard_payload["insights"]) >= 4
+    assert any(insight["title"] == "Performance signal" for insight in dashboard_payload["insights"])
+    assert any("revenue" in insight["description"].lower() for insight in dashboard_payload["insights"])
 
 
 def test_analyze_missing_upload_returns_404(client) -> None:

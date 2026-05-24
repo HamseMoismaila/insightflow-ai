@@ -1,122 +1,129 @@
 # System Design
 
-# High-Level Architecture
+## Current MVP Architecture
 
 ```text
-Frontend (Next.js / Streamlit)
-        ↓
-Backend API (FastAPI)
-        ↓
-Data Processing Layer (Pandas)
-        ↓
-AI Insight Engine (OpenAI/Gemini)
-        ↓
-Visualization Layer (Plotly)
-        ↓
-Dashboard Output
+React + Vite Frontend
+        ->
+FastAPI Backend
+        ->
+Pandas Analysis Layer
+        ->
+OpenAI Responses API (optional)
+        ->
+Dashboard Report JSON
+        ->
+Frontend Charts and Insight Cards
 ```
 
----
-
-# Frontend Layer
+## Frontend Layer
 
 Responsibilities:
-- dataset upload
-- dashboard rendering
-- charts display
-- recommendations UI
+
+- accept CSV/XLSX uploads
+- show upload and analysis states
+- request backend endpoints
+- render report summary, recommendations, insights, and charts
 
 Technologies:
-- Next.js
-- TailwindCSS
-- Plotly
 
----
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
 
-# Backend Layer
+## Backend Layer
 
 Responsibilities:
-- API routing
-- file validation
-- orchestration
-- AI integration
+
+- expose API routes
+- validate uploads
+- orchestrate analysis
+- call OpenAI when configured
+- save report payloads
 
 Technologies:
+
 - FastAPI
+- Pydantic
 - Python
 
----
-
-# Data Processing Layer
+## Data Processing Layer
 
 Responsibilities:
-- cleaning datasets
-- duplicate detection
-- missing value analysis
-- statistical profiling
+
+- load CSV/XLSX files with pandas
+- compute row and column counts
+- calculate numeric statistics
+- detect missing values and duplicate rows
+- derive simple trend and categorical highlights
 
 Technologies:
+
 - Pandas
-- NumPy
+- OpenPyXL for Excel parsing
 
----
-
-# AI Insight Engine
+## AI Insight Layer
 
 Responsibilities:
-- trend analysis
-- recommendations
-- anomaly detection
-- summaries
+
+- build sanitized prompts from dataset summaries
+- request the OpenAI Responses API
+- return text insights when available
+- fall back to safe local summary generation when AI is unavailable
 
 Technologies:
-- OpenAI API
-- Gemini API
 
----
+- OpenAI Responses API
+- HTTPX
 
-# Visualization Layer
+## Storage Model
 
-Responsibilities:
-- generate charts
-- dashboard visualization
-- interactive analytics
+Current MVP storage:
 
-Technologies:
-- Plotly
+- uploaded files are stored in `data/uploads`
+- generated reports are stored in `data/reports`
 
----
+Prepared but not yet active in the report flow:
 
-# API Flow
+- PostgreSQL through `docker-compose.yml`
+
+## API Flow
 
 ```text
-User Upload
-→ FastAPI Endpoint
-→ Dataset Validation
-→ Pandas Processing
-→ AI Prompt Generation
-→ LLM Response
-→ Dashboard Rendering
+User selects file
+-> Frontend uploads file
+-> FastAPI validates and stores upload
+-> Frontend triggers analysis by upload_id
+-> Backend loads dataset with pandas
+-> Backend computes report signals
+-> Backend requests OpenAI or uses fallback summary
+-> Backend saves dashboard JSON by report_id
+-> Frontend fetches dashboard JSON
+-> Frontend renders charts and insight cards
 ```
 
----
+## Error Handling
 
-# Error Handling
+The current system handles:
 
-The system should handle:
-- invalid files
-- corrupted datasets
-- API failures
-- timeout errors
-- missing columns
+- unsupported file types
+- empty files
+- oversized files
+- missing uploads
+- unreadable datasets
+- missing reports
+- OpenAI configuration failures
+- OpenAI API request failures
 
----
+## Planned Evolution
 
-# Scalability
+Future improvements may add:
 
-Future improvements:
-- asynchronous processing
-- task queues
+- asynchronous/background analysis jobs
+- persistent database-backed reports
 - cloud object storage
-- distributed analytics
-- caching systems
+- richer anomaly detection
+- saved report history
+- authentication and multi-user access
