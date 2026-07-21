@@ -44,11 +44,21 @@ graph LR
 
 ## 🛠️ Getting Started
 
-### Prerequisites
-- Python 3.10+
-- Node.js 18+ & npm
+### 📋 Requirements & Prerequisites
+Ensure you have the following installed on your machine:
+- **Git** (to clone and manage code)
+- **Python 3.10+** (to run the FastAPI backend)
+- **Node.js 18+ & npm** (to run the React frontend)
+- *Optional:* An **OpenAI API Key** (for AI-backed reports; defaults to a rule-based fallback if not provided)
 
-### 1. Configuration Setup
+### 📥 1. Clone the Repository
+Clone the repository using Git and navigate to the project directory:
+```bash
+git clone https://github.com/HamseMoismaila/insightflow-ai.git
+cd insightflow-ai
+```
+
+### ⚙️ 2. Configuration Setup
 Create a `.env` file in the root directory by copying the example template:
 ```powershell
 copy .env.example .env
@@ -61,7 +71,7 @@ Open `.env` and fill in your variables.
 > ALLOWED_CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 > ```
 
-### 2. Start the Backend Server
+### 🔌 3. Start the Backend Server
 From the project root:
 ```powershell
 # Install requirements
@@ -72,7 +82,7 @@ python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 ```
 - Backend health endpoint: [http://127.0.0.1:8000/api/v1/health](http://127.0.0.1:8000/api/v1/health)
 
-### 3. Start the Frontend Dev Server
+### 💻 4. Start the Frontend Dev Server
 From the `frontend/` directory:
 ```powershell
 # Install dependencies
