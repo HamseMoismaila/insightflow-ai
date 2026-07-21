@@ -1,127 +1,128 @@
-# insightflow-ai
+# 📊 InsightFlow AI
 
-InsightFlow AI is a local MVP for uploading CSV/XLSX datasets, generating dataset-aware analysis, and rendering a dashboard with summaries, recommendations, insight cards, and charts.
+InsightFlow AI is an intelligent data profiling and analytics application designed to ingest CSV or Excel spreadsheets, analyze their structure and statistical distributions, and render an interactive dashboard complete with dynamic charts, data signal alerts, and AI-driven business recommendations.
 
-## What It Does Today
+---
 
-The current implementation supports this end-to-end flow:
+## ✨ Features
 
-1. Upload a CSV or XLSX file from the React frontend
-2. Validate and store the file on the FastAPI backend
-3. Load the dataset with pandas
-4. Build a report from real dataset signals such as:
-   - row and column counts
-   - numeric ranges and averages
-   - simple trend direction
-   - dominant category values
-   - missing values and duplicates
-5. Generate an AI-backed summary when OpenAI is configured, or a safe local fallback summary when it is not
-6. Save a dashboard-ready report payload to local storage
-7. Fetch and render the report in the frontend
+- **Drag-and-Drop Dataset Ingestion**: Upload `.csv` and `.xlsx` files with automatic frontend and backend validation.
+- **Automated Data Profiling**: Instantly extract key metrics like row/column counts, column types, statistics (min, max, average), duplicate counts, missing values, and trend directions using **Pandas**.
+- **AI-Powered Insights**: Generates natural language summaries and actionable recommendations based on dataset signals.
+- **Fallback Rule-Engine**: Automatically switches to a local rule-based analytical summary if OpenAI is not configured or fails.
+- **Interactive Visualizations**: Renders dynamic Bar, Line, and Pie charts using **Recharts** based on observed data columns.
 
-## Tech Stack
+---
 
-### Frontend
+## 🏗️ Architecture & Data Flow
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS v4
-- Recharts
-- Lucide React
+InsightFlow AI uses a decoupled client-server structure:
 
-### Backend
+```mermaid
+graph LR
+    classDef frontend fill:#bae6fd,stroke:#0284c7,stroke-width:1.5px,color:#0369a1;
+    classDef backend fill:#a7f3d0,stroke:#059669,stroke-width:1.5px,color:#047857;
+    classDef engine fill:#ddd6fe,stroke:#7c3aed,stroke-width:1.5px,color:#6d28d9;
 
-- Python 3
-- FastAPI
-- Uvicorn
-- Pydantic and Pydantic Settings
-- Pandas
-- OpenPyXL
-- python-multipart
-- HTTPX
+    FE["React Frontend<br/>(Visual UI & Charts)"]:::frontend
+    BE["FastAPI Backend<br/>(API Gateway)"]:::backend
+    ENG["Data & AI Engine<br/>(Pandas + OpenAI)"]:::engine
+    FS[("Local Filesystem<br/>(Uploads & Reports)")]:::backend
 
-### Tooling
+    FE <-->|HTTP Requests| BE
+    BE <-->|Parse & Analyze| ENG
+    BE <-->|Save / Load JSON| FS
+```
 
-- Pytest
-- Docker
-- Docker Compose
+### End-to-End Flow:
+1. **Upload**: User drops a file; the React frontend sends it to `/api/v1/upload` which validates and stores it in `data/uploads/`.
+2. **Analysis**: The frontend requests `/api/v1/analyze/{upload_id}`. The backend uses Pandas to process statistics and queries OpenAI (or the local fallback) to create insights.
+3. **Storage**: The generated analysis payload is stored on the filesystem at `data/reports/{report_id}.json`.
+4. **Render**: The frontend requests `/api/v1/dashboard/{report_id}` and visualizes the dashboard.
 
-## Current Architecture
+---
 
-- `frontend/` contains the React app
-- `backend/app/` contains the FastAPI app
-- `backend/app/api/v1/` contains HTTP routes
-- `backend/app/services/` contains the main business logic
-- `backend/app/schemas/` contains response models
-- `data/uploads/` stores uploaded files locally
-- `data/reports/` stores generated report JSON locally
-- `docs/` contains product and technical documentation
+## 🛠️ Getting Started
 
-## Implemented API
+### Prerequisites
+- Python 3.10+
+- Node.js 18+ & npm
 
-- `GET /api/v1/health`
-- `POST /api/v1/upload`
-- `POST /api/v1/analyze/{upload_id}`
-- `GET /api/v1/dashboard/{report_id}`
-
-## Current Report Behavior
-
-The dashboard now prioritizes actual dataset findings before data-quality warnings.
-
-Examples of the current report content:
-
-- trend direction for numeric columns
-- min, max, and average for key numeric columns
-- most common values for categorical columns
-- recommendations tied to observed dataset behavior
-- missing-value and duplicate notes as supporting context
-
-## Local Development
-
-### Backend
-
-From the repo root:
-
+### 1. Configuration Setup
+Create a `.env` file in the root directory by copying the example template:
 ```powershell
+copy .env.example .env
+```
+Open `.env` and fill in your variables. 
+
+> [!IMPORTANT]
+> Because Pydantic Settings parses list fields as JSON strings, **`ALLOWED_CORS_ORIGINS`** must be formatted as a valid JSON array. For example:
+> ```env
+> ALLOWED_CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
+> ```
+
+### 2. Start the Backend Server
+From the project root:
+```powershell
+# Install requirements
 python -m pip install -r requirements.txt
+
+# Start the FastAPI server
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 ```
+- Backend health endpoint: [http://127.0.0.1:8000/api/v1/health](http://127.0.0.1:8000/api/v1/health)
 
-### Frontend
-
-From `frontend/`:
-
+### 3. Start the Frontend Dev Server
+From the `frontend/` directory:
 ```powershell
+# Install dependencies
 npm install
+
+# Start the dev server
 npm run dev
 ```
+- Frontend application: [http://localhost:3000](http://localhost:3000)
 
-### Local URLs
+---
 
-- Frontend: `http://127.0.0.1:3000`
-- Backend health: `http://127.0.0.1:8000/api/v1/health`
+## 🧪 Testing
 
-## Environment Variables
+### Running Backend Tests
+Ensure your python dependencies are installed, then run the test suite from the root directory:
+```powershell
+python -m pytest
+```
 
-Important variables used by the current MVP:
+### Running Frontend Checks
+From the `frontend/` directory:
+```powershell
+# Check Typescript compilation
+npm run typecheck
 
-- `OPENAI_API_KEY`
-- `OPENAI_MODEL`
-- `OPENAI_TIMEOUT_SECONDS`
-- `OPENAI_BASE_URL`
-- `ALLOWED_CORS_ORIGINS`
-- `UPLOAD_STORAGE_DIR`
-- `REPORT_STORAGE_DIR`
-- `MAX_UPLOAD_SIZE_BYTES`
-- `DATABASE_URL`
-- `VITE_API_BASE_URL`
+# Build for production
+npm run build
+```
 
-See `.env.example` for the current template.
+---
 
-## Notes
+## 📂 Folder Structure
 
-- The MVP currently persists uploads and reports on the local filesystem.
-- PostgreSQL is prepared in Docker infrastructure, but the active MVP flow does not yet store uploads or reports in the database.
-- OpenAI is optional for local development because the backend includes a safe fallback report path.
-- The frontend is connected to the real backend API and renders report payloads returned by the backend.
+```
+insightflow-ai/
+├── backend/                  # Python FastAPI Backend
+│   ├── app/
+│   │   ├── api/v1/           # API endpoints (health, upload, analyze, dashboard)
+│   │   ├── core/config.py    # Reads environment variables (CORS, keys)
+│   │   ├── services/         # Math parsing (Pandas) & AI formatting (OpenAI)
+│   │   └── main.py           # Starts the FastAPI application
+│   └── tests/                # Automated backend tests (pytest)
+│
+├── frontend/                 # React 19 Frontend
+│   └── src/
+│       ├── components/       # UI elements (charts, upload panels, cards)
+│       └── App.tsx           # Main page controller
+│
+└── data/                     # Local storage (created automatically)
+    ├── uploads/              # Raw CSV / Excel files you upload
+    └── reports/              # Generated JSON reports
+```
