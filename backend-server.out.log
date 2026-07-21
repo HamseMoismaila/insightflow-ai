@@ -1,3 +1,0 @@
-INFO:     127.0.0.1:61778 - "POST /api/v1/upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51451 - "POST /api/v1/analyze/upl_f977893de20e HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54287 - "GET /api/v1/dashboard/rep_77c0d093c6cb HTTP/1.1" 200 OK
